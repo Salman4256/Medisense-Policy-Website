@@ -1,0 +1,114 @@
+.notice-card {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.notice-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+.notice-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.notice-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.notice-message {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Medical Disclaimer Variant */
+.notice-medical {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(225, 29, 72, 0.08) 100%);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.08);
+}
+
+.notice-medical .notice-icon-wrapper {
+  background: rgba(245, 158, 11, 0.2);
+  color: #FBBF24;
+}
+
+.notice-medical .notice-title {
+  color: #FCD34D;
+}
+
+.notice-medical .notice-message {
+  color: #FEF3C7;
+}
+
+/* Info Variant */
+.notice-info {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(2, 132, 199, 0.08) 100%);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.notice-info .notice-icon-wrapper {
+  background: rgba(6, 182, 212, 0.2);
+  color: #38BDF8;
+}
+
+.notice-info .notice-title {
+  color: #7DD3FC;
+}
+
+.notice-info .notice-message {
+  color: #E0F2FE;
+}
+
+/* Security Variant */
+.notice-security {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(13, 148, 136, 0.08) 100%);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.notice-security .notice-icon-wrapper {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+}
+
+.notice-security .notice-title {
+  color: #6EE7B7;
+}
+
+.notice-security .notice-message {
+  color: #D1FAE5;
+}
+
+/* Warning Variant */
+.notice-warning {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(245, 158, 11, 0.08) 100%);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.notice-warning .notice-icon-wrapper {
+  background: rgba(239, 68, 68, 0.2);
+  color: #F87171;
+}
+
+.notice-warning .notice-title {
+  color: #FCA5A5;
+}
+
+.notice-warning .notice-message {
+  color: #FEE2E2;
+}
