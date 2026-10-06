@@ -19,6 +19,29 @@ export const PrivacySection: React.FC<PrivacySectionProps> = ({ section }) => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const renderFormattedText = (text: string) => {
+    const parts = text.split(/(https?:\/\/[^\s]+|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g);
+    if (parts.length === 1) return text;
+
+    return parts.map((part, index) => {
+      if (part.startsWith('http://') || part.startsWith('https://')) {
+        return (
+          <a key={index} href={part} target="_blank" rel="noopener noreferrer">
+            {part}
+          </a>
+        );
+      }
+      if (part.includes('@') && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(part)) {
+        return (
+          <a key={index} href={`mailto:${part}`}>
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <section id={section.id} className="privacy-section" aria-labelledby={`heading-${section.id}`}>
       <div className="section-header">
@@ -47,7 +70,7 @@ export const PrivacySection: React.FC<PrivacySectionProps> = ({ section }) => {
       <div className="section-body">
         {section.content.map((paragraph, idx) => (
           <p key={idx} className="section-paragraph">
-            {paragraph}
+            {renderFormattedText(paragraph)}
           </p>
         ))}
 
@@ -59,7 +82,7 @@ export const PrivacySection: React.FC<PrivacySectionProps> = ({ section }) => {
                 <ul className="subsection-list">
                   {sub.points.map((point, pIdx) => (
                     <li key={pIdx} className="subsection-item">
-                      {point}
+                      {renderFormattedText(point)}
                     </li>
                   ))}
                 </ul>

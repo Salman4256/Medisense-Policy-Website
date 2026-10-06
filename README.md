@@ -99,14 +99,18 @@ All contact information, developer identity, and metadata are centralized in [`s
 
 Before final submission to Google Play Console, update the following bracketed placeholders:
 
-| Config Key | Current Placeholder Value | Description |
+| Config Key | Value | Description |
 | :--- | :--- | :--- |
-| `developerName` | `[YOUR DEVELOPER / COMPANY NAME]` | Your official developer, entity, or studio name |
-| `supportEmail` | `[YOUR SUPPORT EMAIL]` | The support email address for user privacy inquiries |
-| `websiteUrl` | `[YOUR FINAL WEBSITE URL]` | The root domain of your production deployment |
-| `privacyPolicyUrl` | `[YOUR FINAL WEBSITE URL]/privacy-policy` | The direct canonical link to the privacy policy |
-| `effectiveDate` | `October 5, 2026` | Effective launch date of this policy |
-| `lastUpdated` | `October 5, 2026` | Date of most recent policy revision |
+| `developerName` | `The Medisense Team` | Official developer identity |
+| `supportEmail` | `support4medisense@gmail.com` | Official support email for user assistance & data deletion |
+| `websiteUrl` | `https://medisense-policy-website.vercel.app/` | Root domain of production deployment |
+| `privacyPolicyUrl` | `https://medisense-policy-website.vercel.app/privacy-policy` | Canonical link to privacy policy |
+| `termsUrl` | `https://medisense-policy-website.vercel.app/terms` | Terms of service and medical disclaimer portal |
+| `deletionUrl` | `https://medisense-policy-website.vercel.app/data-deletion` | Google Play account and data deletion portal |
+| `complianceUrl` | `https://medisense-policy-website.vercel.app/compliance` | Google Play Health App compliance and Data Safety guide |
+| `appVersion` | `1.1.0 (Build 4)` | Active Android application release version |
+| `minAndroidVersion` | `Android 11 (API 30+)` | Minimum supported Android operating system |
+| `effectiveDate` | `October 6, 2026` | Effective & revision date of policy document |
 
 ---
 

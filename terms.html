@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -7,11 +7,11 @@
   <title>Terms of Service &amp; Medical Disclaimer | MediSense</title>
   <meta name="description"
     content="Terms of Service, End-User License Agreement, and Medical Disclaimer for the MediSense Android Application (com.medisense.app).">
-  <meta name="author" content="MediSense Healthcare Technologies">
+  <meta name="author" content="The Medisense Team">
   <meta name="robots" content="index, follow">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,10 +29,9 @@
   <header class="header">
     <div class="container">
       <a href="index.html" class="brand" title="MediSense Home">
-        <img src="assets/logo.png" alt="MediSense Logo" class="brand-logo">
         <div class="brand-text">
           <span class="brand-title">MediSense</span>
-          <span class="brand-tagline">Healthcare Privacy Portal</span>
+          <span class="brand-tagline">Healthcare Privacy &amp; Governance Portal</span>
         </div>
       </a>
 
@@ -42,34 +41,7 @@
           <li><a href="data-deletion.html" class="nav-link">Data Deletion</a></li>
           <li><a href="terms.html" class="nav-link active">Terms &amp; Disclaimer</a></li>
         </ul>
-
-        <div class="nav-actions">
-          <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
-            <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-            <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </button>
-        </div>
       </nav>
-
-      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
     </div>
   </header>
 
@@ -82,19 +54,23 @@
           <span class="badge badge-compliance">Healthcare Terms &amp; Medical Disclaimer</span>
         </div>
 
-        <h1 class="hero-title">Terms of Service</h1>
+        <h1 class="hero-title">Terms of Service &amp; Medical Disclaimer</h1>
         <p class="hero-subtitle">
-          Please review these Terms of Service carefully before utilizing the MediSense application.
+          Please review these Terms of Service carefully before utilizing the MediSense Android application (com.medisense.app).
         </p>
 
         <div class="hero-meta">
           <div class="hero-meta-item">
-            <span>Effective Date:</span>
-            <strong>October 4, 2026</strong>
-          </div>
-          <div class="hero-meta-item">
             <span>Package ID:</span>
             <strong>com.medisense.app</strong>
+          </div>
+          <div class="hero-meta-item">
+            <span>Version:</span>
+            <strong>v1.1.0 (Build 4)</strong>
+          </div>
+          <div class="hero-meta-item">
+            <span>Effective Date:</span>
+            <strong>October 6, 2026</strong>
           </div>
         </div>
       </div>
@@ -105,7 +81,7 @@
   <main class="policy-body">
     <div class="container" style="max-width: 900px;">
 
-      <div class="callout callout-medical">
+      <div class="callout callout-medical" id="medical-disclaimer">
         <div class="callout-medical-title">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
@@ -115,10 +91,11 @@
           <span>PRIMARY MEDICAL NOTICE &amp; DISCLAIMER</span>
         </div>
         <p>
-          MediSense provides educational health tracking, medication reminder scheduling, and on-device risk assessment.
-          <strong>It is not intended to replace, nor does it replace, professional medical evaluation, clinical
-            diagnosis, or therapeutic advice.</strong> Always consult a qualified medical professional before taking any
-          health action.
+          MediSense is intended for health-management support, personal health education, and decision support only.
+          <strong>Information, machine-learning predictions, explainability factor attributions, risk indicators, personalized guidance, and AI-generated conversational responses provided by MediSense are not medical diagnoses, treatments, or prescriptions, and should never be considered a substitute for professional medical evaluation, diagnosis, or advice from a certified healthcare provider.</strong>
+        </p>
+        <p>
+          <strong>Do not use MediSense to make emergency medical decisions.</strong> For diagnosis, urgent medical concerns, or medication changes, always consult an appropriately qualified healthcare professional or emergency service immediately.
         </p>
       </div>
 
@@ -144,13 +121,13 @@
       <section class="policy-section">
         <h2>3. Nature of Machine Learning &amp; AI Features</h2>
         <p>
-          The disease prediction models (built on TensorFlow Lite) and conversational AI interfaces (powered by Google
-          Gemini and Groq):
+          The disease prediction models (bundled locally as TensorFlow Lite / LiteRT) and conversational AI interfaces (powered by Groq and Google Gemini API):
         </p>
         <ul>
-          <li>Provide probabilistic approximations based on computational algorithms and statistical associations.</li>
-          <li>Do not constitute diagnostic pathology or certified clinical lab evaluations.</li>
-          <li>Should be treated as informative prompts for discussion with your licensed healthcare provider.</li>
+          <li>Provide probabilistic approximations based on computational algorithms, neural network weights, and statistical correlations.</li>
+          <li>Do not constitute diagnostic pathology, laboratory blood work, certified clinical testing, or individualized clinical advice.</li>
+          <li>Must be treated strictly as educational reference points to help you formulate questions for discussions with your licensed physician.</li>
+          <li>Model confidence indicators reflect mathematical pattern alignment with training distributions and do not indicate clinical medical certainty.</li>
         </ul>
       </section>
 
@@ -160,7 +137,7 @@
           While MediSense implements exact alarm scheduling to alert you of scheduled medication times, technical
           factors (such as device battery depletion, OS background killing, or hardware malfunction) could affect timely
           delivery. You remain solely responsible for managing your prescriptions and adhering to medical advice
-          provided by your treating doctor.
+          provided by your treating doctor. MediSense does not prescribe medications or determine dosages.
         </p>
       </section>
 
@@ -168,7 +145,7 @@
         <h2>5. Intellectual Property Rights</h2>
         <p>
           The design, logos, trademarks, software code, neural network configurations, and content within MediSense are
-          the proprietary property of the MediSense development team and are protected under international copyright and
+          the proprietary property of The Medisense Team and are protected under international copyright and
           intellectual property laws.
         </p>
       </section>
@@ -176,7 +153,7 @@
       <section class="policy-section">
         <h2>6. Limitation of Liability</h2>
         <p>
-          To the maximum extent permitted by applicable law, the MediSense development team, contributors, and service
+          To the maximum extent permitted by applicable law, The Medisense Team, contributors, and service
           providers shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising
           from the use of, or inability to use, the application, including but not limited to health decisions, delayed
           medical treatment, or reliance on machine learning outputs.
@@ -186,16 +163,15 @@
       <section class="policy-section">
         <h2>7. Governing Law &amp; Dispute Resolution</h2>
         <p>
-          These Terms of Service are governed by and construed in accordance with the applicable laws of the
-          jurisdiction in which the developer resides, without regard to conflict of law principles.
+          These Terms of Service are governed by and construed in accordance with applicable laws, without regard to conflict of law principles.
         </p>
       </section>
 
       <section class="policy-section">
         <h2>8. Contact &amp; Inquiries</h2>
         <p>
-          For questions regarding these Terms of Service, contact Raghavan at <a
-            href="mailto:raghavan.cs23@krct.ac.in"><code>raghavan.cs23@krct.ac.in</code></a>.
+          For questions regarding these Terms of Service, contact The Medisense Team at <a
+            href="mailto:support4medisense@gmail.com"><code>support4medisense@gmail.com</code></a>.
         </p>
       </section>
 
@@ -207,7 +183,7 @@
     <div class="container">
       <div class="footer-bottom">
         <div>
-          &copy; 2026 MediSense Team. Official Terms of Service for MediSense App.
+          &copy; 2026 The Medisense Team. Official Terms of Service for MediSense App.
         </div>
         <div>
           <a href="index.html">Privacy Policy</a> &bull; <a href="data-deletion.html">Data Deletion</a>

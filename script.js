@@ -233,7 +233,7 @@ function initDeletionGenerator() {
     const reason = reasonSelect?.value || 'Account Closure / Data Purge';
     const notes = notesInput?.value.trim() || 'Please permanently delete my MediSense account, authentication record, and all associated personal and health data stored in the cloud PostgreSQL database.';
 
-    const bodyText = `To: MediSense Privacy & Security Team (raghavan.cs23@krct.ac.in)
+    const bodyText = `To: MediSense Privacy & Security Team (support4medisense@gmail.com)
 Subject: [DATA DELETION REQUEST] MediSense App Account Deletion
 
 Dear MediSense Privacy Team,
@@ -263,7 +263,7 @@ MediSense User`;
     if (mailtoBtn) {
       const encodedSubject = encodeURIComponent('[DATA DELETION REQUEST] MediSense App Account Deletion');
       const encodedBody = encodeURIComponent(bodyText);
-      mailtoBtn.href = `mailto:raghavan.cs23@krct.ac.in?subject=${encodedSubject}&body=${encodedBody}`;
+      mailtoBtn.href = `mailto:support4medisense@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
     }
   }
 

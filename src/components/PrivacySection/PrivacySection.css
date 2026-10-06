@@ -58,6 +58,20 @@
   margin-bottom: var(--space-md);
 }
 
+.section-paragraph a,
+.subsection-item a {
+  color: #38BDF8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+  transition: color var(--transition-fast);
+}
+
+.section-paragraph a:hover,
+.subsection-item a:hover {
+  color: #7DD3FC;
+}
+
 /* Subsections */
 .subsections-container {
   display: flex;

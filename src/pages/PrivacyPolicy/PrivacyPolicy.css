@@ -61,7 +61,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-md);
   width: 100%;
-  max-width: 880px;
+  max-width: 920px;
   margin-bottom: var(--space-2xl);
 }
 
@@ -198,11 +198,13 @@
 
 /* Responsive Breakpoints */
 @media (max-width: 1080px) {
-  .hero-meta-grid {
+  .pillars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .pillars-grid {
+@media (max-width: 900px) {
+  .hero-meta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

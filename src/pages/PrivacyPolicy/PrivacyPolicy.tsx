@@ -4,15 +4,17 @@ import {
   Cpu,
   Database,
   Lock,
+  Sparkles,
+  Smartphone,
   Calendar,
   Layers,
-  Sparkles,
-  Smartphone
+  HeartPulse
 } from 'lucide-react';
 import siteConfig from '../../config/siteConfig';
 import { privacySections } from '../../data/privacyPolicyContent';
 import TableOfContents from '../../components/TableOfContents/TableOfContents';
 import PrivacySection from '../../components/PrivacySection/PrivacySection';
+import AboutAndFeatures from '../../components/AboutAndFeatures/AboutAndFeatures';
 import './PrivacyPolicy.css';
 
 export const PrivacyPolicy: React.FC = () => {
@@ -21,7 +23,6 @@ export const PrivacyPolicy: React.FC = () => {
   // IntersectionObserver to dynamically highlight the currently scrolled section
   useEffect(() => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
-      // Find the first intersecting entry from the top
       const visibleEntry = entries.find((entry) => entry.isIntersecting);
       if (visibleEntry) {
         setActiveSectionId(visibleEntry.target.id);
@@ -62,6 +63,10 @@ export const PrivacyPolicy: React.FC = () => {
               <Cpu size={14} />
               <span>On-Device ML Architecture</span>
             </span>
+            <span className="badge badge-purple">
+              <HeartPulse size={14} />
+              <span>Play Store: Medical</span>
+            </span>
           </div>
 
           <h1 className="hero-title">
@@ -69,26 +74,10 @@ export const PrivacyPolicy: React.FC = () => {
           </h1>
 
           <p className="hero-subtitle">
-            Comprehensive transparency regarding our offline-first architecture, local on-device machine learning, encrypted cloud synchronization, and your health data rights.
+            Comprehensive transparency regarding our offline-first architecture, local on-device machine learning, encrypted cloud synchronization, and health data rights for the MediSense Android application.
           </p>
 
           <div className="hero-meta-grid">
-            <div className="meta-card">
-              <Calendar size={16} className="meta-icon" />
-              <div className="meta-info">
-                <span className="meta-label">Effective Date</span>
-                <span className="meta-value">{siteConfig.effectiveDate}</span>
-              </div>
-            </div>
-
-            <div className="meta-card">
-              <Layers size={16} className="meta-icon" />
-              <div className="meta-info">
-                <span className="meta-label">Last Updated</span>
-                <span className="meta-value">{siteConfig.lastUpdated}</span>
-              </div>
-            </div>
-
             <div className="meta-card">
               <Smartphone size={16} className="meta-icon" />
               <div className="meta-info">
@@ -104,6 +93,22 @@ export const PrivacyPolicy: React.FC = () => {
                 <span className="meta-value">TensorFlow Lite (Offline)</span>
               </div>
             </div>
+
+            <div className="meta-card">
+              <Calendar size={16} className="meta-icon" />
+              <div className="meta-info">
+                <span className="meta-label">Effective Date</span>
+                <span className="meta-value">{siteConfig.effectiveDate}</span>
+              </div>
+            </div>
+
+            <div className="meta-card">
+              <Layers size={16} className="meta-icon" />
+              <div className="meta-info">
+                <span className="meta-label">Last Updated</span>
+                <span className="meta-value">{siteConfig.lastUpdated}</span>
+              </div>
+            </div>
           </div>
 
           {/* Core Privacy Pillars Highlight Banner */}
@@ -115,7 +120,7 @@ export const PrivacyPolicy: React.FC = () => {
               <div className="pillar-content">
                 <h3 className="pillar-title">100% On-Device ML</h3>
                 <p className="pillar-desc">
-                  Disease predictions and XAI feature attributions run entirely on your phone. No symptom vectors are uploaded for prediction.
+                  Disease predictions and XAI feature attributions run entirely on your phone via TensorFlow Lite. No symptom vectors are uploaded for prediction.
                 </p>
               </div>
             </div>
@@ -127,7 +132,7 @@ export const PrivacyPolicy: React.FC = () => {
               <div className="pillar-content">
                 <h3 className="pillar-title">Offline-First Storage</h3>
                 <p className="pillar-desc">
-                  Health profiles, medication schedules, and appointments are stored in local Room SQLite storage with optional encrypted cloud sync.
+                  Health profiles, medication schedules, and appointments reside securely in local Room SQLite storage with optional encrypted Supabase cloud backup.
                 </p>
               </div>
             </div>
@@ -139,7 +144,7 @@ export const PrivacyPolicy: React.FC = () => {
               <div className="pillar-content">
                 <h3 className="pillar-title">No Data Monetization</h3>
                 <p className="pillar-desc">
-                  We do not sell, rent, or monetize personal health information, nor do we embed third-party advertising SDKs.
+                  We do not sell, rent, or monetize personal health information, nor do we embed third-party advertising SDKs or data brokers.
                 </p>
               </div>
             </div>
@@ -149,9 +154,9 @@ export const PrivacyPolicy: React.FC = () => {
                 <Sparkles size={20} />
               </div>
               <div className="pillar-content">
-                <h3 className="pillar-title">Complete User Sovereignty</h3>
+                <h3 className="pillar-title">Complete Sovereignty</h3>
                 <p className="pillar-desc">
-                  Instant local data clearing, full JSON data export with SHA-256 integrity, and user-initiated PDF sharing.
+                  One-tap local data wiping, complete JSON data export with SHA-256 checksum integrity, and user-controlled Android sharing.
                 </p>
               </div>
             </div>
@@ -159,8 +164,11 @@ export const PrivacyPolicy: React.FC = () => {
         </div>
       </section>
 
+      {/* About MediSense & Features Section */}
+      <AboutAndFeatures />
+
       {/* Main Content Layout with Sticky TOC Sidebar */}
-      <section className="privacy-body-section">
+      <section className="privacy-body-section" id="policy-sections">
         <div className="container layout-grid">
           {/* Left Column: Sticky Table of Contents */}
           <aside className="layout-sidebar">
